@@ -18,7 +18,7 @@ anchorhere <-
       stop(paste(path, "dosen't exist!"))
     }
 
-    if (!file.exists(anchor)) {
+    if (file.exists(anchor)) {
       stop(paste(anchor, " exist!"))
     }
 

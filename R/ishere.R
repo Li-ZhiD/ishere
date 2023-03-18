@@ -43,9 +43,9 @@ ishere <-
         }
       } else {
         proj.mess <- suppressWarnings(readLines(files, n = 1))
-        MYDIR <- dirname(files)
+        proj.dir <- dirname(files)
         if (proj.nm == proj.mess) {
-          message(paste0("Project directory is here: ", MYDIR))
+          message(paste0("Project directory is here: ", proj.dir))
           message(paste0("Project message: ", proj.mess))
           break
         } else {
@@ -56,5 +56,5 @@ ishere <-
       }
     }
 
-    return(MYDIR)
+    return(proj.dir)
   }
