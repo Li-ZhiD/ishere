@@ -22,7 +22,7 @@ whereis <-
         list.files(
           path = path,
           pattern = ifelse(absolute.nm, paste0("^", pattern, "$"), pattern),
-          all.files = all,
+          all.files = TRUE,
           full.names = TRUE,
           recursive = TRUE,
           include.dirs = FALSE,
