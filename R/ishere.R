@@ -32,7 +32,10 @@ ishere <-
         list.files(
           pwd,
           pattern = paste0("^", anchor, "$"),
-          full.names = TRUE
+          all.files = TRUE,
+          full.names = TRUE,
+          include.dirs = FALSE,
+          no.. = TRUE
         )
 
       if (length(files) == 0) {
