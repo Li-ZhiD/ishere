@@ -52,6 +52,11 @@ whereis <-
 
         if (length(files) == 0) {
           stop(paste0(pattern, " does not found!"))
+        } else {
+          res <- normalizePath(file.path(path, files))
+          message(paste0("Here: ", paste0(res, collapse = ", ")))
+
+          return(res)
         }
       } else {
         stop(paste0(path, " dose not exsit!"))
@@ -59,6 +64,4 @@ whereis <-
     } else {
       stop("'pattern' missing!")
     }
-
-    return(normalizePath(file.path(path, files)))
   }
