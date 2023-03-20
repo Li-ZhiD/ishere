@@ -4,10 +4,10 @@
 \alias{ishere}
 \title{Get directory}
 \usage{
-ishere(proj.nm = "i am here", anchor = "_proj_version_", stop.here = "/mnt")
+ishere(proj.mess = "i am here", anchor = "_proj_version_", stop.here = "/mnt")
 }
 \arguments{
-\item{proj.nm}{character First line in anchor file.}
+\item{proj.mess}{character First line in anchor file, project message.}
 
 \item{anchor}{character Anchor filename.}
 

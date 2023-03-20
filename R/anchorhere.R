@@ -1,6 +1,6 @@
 #' Drop the anchor to specific directory
 #'
-#' @param proj.nm character First line in anchor file.
+#' @param proj.mess character First line in anchor file.
 #' @param anchor character Anchor filename.
 #' @param path Path. Directory to drop anchor.
 #'
@@ -10,7 +10,7 @@
 #' @examples \dontrun{anchorhere("my project!")}
 anchorhere <-
   function(
-    proj.nm = date(), ## first line in anchor file
+    proj.mess = date(), ## first line in anchor file
     anchor = "_proj_version_", ## anchor file
     path = "./" ## absolute path, exsit
   ) {
@@ -23,7 +23,7 @@ anchorhere <-
     }
 
     writeLines(
-      proj.nm,
+      proj.mess,
       file.path(path, anchor)
     )
 

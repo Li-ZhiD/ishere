@@ -4,16 +4,18 @@
 \alias{whereis}
 \title{Find files under target path}
 \usage{
-whereis(path = "./", pattern, absolute.nm = TRUE, ...)
+whereis(path = "./", pattern, ..., absolute.nm = TRUE, ignore.case = FALSE)
 }
 \arguments{
 \item{path}{character Path.}
 
 \item{pattern}{character File pattern}
 
+\item{...}{character Specify subpathes to search.}
+
 \item{absolute.nm}{logical 'pattern' is full name or not.}
 
-\item{...}{character Specify subpath to search.}
+\item{ignore.case}{logical Should pattern-matching be case-insensitive?}
 }
 \value{
 character Path.
@@ -23,4 +25,5 @@ Find files under target path
 }
 \examples{
 \dontrun{whereis(pattern = "_proj_version_")}
+\dontrun{whereis(pattern = "_proj_version_", "here", "there")}
 }

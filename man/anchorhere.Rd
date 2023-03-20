@@ -4,10 +4,10 @@
 \alias{anchorhere}
 \title{Drop the anchor to specific directory}
 \usage{
-anchorhere(proj.nm = date(), anchor = "_proj_version_", path = "./")
+anchorhere(proj.mess = date(), anchor = "_proj_version_", path = "./")
 }
 \arguments{
-\item{proj.nm}{character First line in anchor file.}
+\item{proj.mess}{character First line in anchor file.}
 
 \item{anchor}{character Anchor filename.}
 

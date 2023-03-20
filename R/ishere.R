@@ -1,6 +1,6 @@
 #' Get directory
 #'
-#' @param proj.nm character First line in anchor file.
+#' @param proj.mess character First line in anchor file, project message.
 #' @param anchor character Anchor filename.
 #' @param stop.here Path. Top path to stop search.
 #'
@@ -10,7 +10,7 @@
 #' @examples \dontrun{ishere("my project.")}
 ishere <-
   function(
-    proj.nm = "i am here", ## first line in anchor file
+    proj.mess = "i am here", ## first line in anchor file, project message
     anchor = "_proj_version_", ## anchor file
     stop.here = "/mnt" ## absolute path, exsit
   ) {
@@ -45,15 +45,15 @@ ishere <-
           pwd <- normalizePath(file.path(pwd, ".."))
         }
       } else {
-        proj.mess <- suppressWarnings(readLines(files, n = 1))
+        proj.line <- suppressWarnings(readLines(files, n = 1))
         proj.dir <- dirname(files)
-        if (proj.nm == proj.mess) {
+        if (proj.mess == proj.line) {
           message(paste0("Project directory is here: ", proj.dir))
-          message(paste0("Project message: ", proj.mess))
+          message(paste0("Project message: ", proj.line))
           break
         } else {
-          message(paste0("Required project message: ", proj.nm))
-          message(paste0("Offered project message: ", proj.mess))
+          message(paste0("Required project message: ", proj.mess))
+          message(paste0("Offered project message: ", proj.line))
           stop("Messages are not identical!")
         }
       }
