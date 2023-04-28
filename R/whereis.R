@@ -36,13 +36,14 @@ whereis <-
           )
 
         subpath <- list(...)
+        files <- sub(path, "", files)
         if (length(subpath) > 0) {
           i <- 1
           while (i <= length(subpath)) {
             files <-
               grep(
                 subpath[[i]],
-                sub(path, "", files),
+                files,
                 ignore.case = ignore.case,
                 value = TRUE
               )
@@ -54,7 +55,7 @@ whereis <-
         if (length(files) == 0) {
           stop(paste0(pattern, " does not found!"))
         } else {
-          res <- normalizePath(files)
+          res <- normalizePath(file.path(path, files))
           message(paste0("Here: ", paste0(res, collapse = ", ")))
 
           return(res)

@@ -1,7 +1,7 @@
 Package: ishere
 Type: Package
 Title: Anchor Project Root Directory
-Version: 0.5.0
+Version: 1.0.0
 Author: c(person("Zhidan", "Li", email = "lzd_hunan@126.com", role = c("aut", "cre")))
 Maintainer: Li zhidan <lzd_hunan@126.com>
 Description: Anchor directory according to offered filename and message
